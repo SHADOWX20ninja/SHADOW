@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcade Style Landing Page</title>
+    <title>Custom Chrome Homepage</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">ARCADE</div>
-        <ul class="nav-links">
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Pricing</a></li>
-        </ul>
-        <div class="buttons">
-            <button class="login">Log in</button>
-            <button class="signup">Sign up for free</button>
-        </div>
-    </nav>
+    <!-- Theme Settings Button -->
+    <button id="theme-toggle"><i class="fa-solid fa-paint-brush"></i></button>
 
-    <header class="hero">
-        <p class="announcement">🚀 Announcing AI-Powered Content Generation</p>
-        <h1>Product demos that aren't boring</h1>
-        <p class="subtitle">Create interactive demos that convert — in minutes.</p>
-        <div class="cta-buttons">
-            <button class="install">Install free extension</button>
-            <button class="talk">Talk to sales</button>
+    <!-- Theme Selector Popup -->
+    <div id="theme-popup">
+        <h3>Choose a Theme</h3>
+        <div class="color-options">
+            <div class="color-box" data-color="#ffffff, #88c7f7"></div>
+            <div class="color-box" data-color="#1e1e1e, #505050"></div>
+            <div class="color-box" data-color="#ff9966, #ff5e62"></div>
+            <div class="color-box" data-color="#4a90e2, #145da0"></div>
+            <div class="color-box" data-color="#ffcc00, #ff6600"></div>
         </div>
-    </header>
+        <button id="close-theme">Close</button>
+    </div>
+
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-box">
+            <button onclick="startVoiceSearch()"><i class="fa-solid fa-microphone"></i></button>
+            <input type="text" id="search" placeholder="Search Google...">
+            <button onclick="searchGoogle()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="openGoogleLens()"><i class="fa-solid fa-camera"></i></button>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.google.com" target="_blank" class="google">
+                <i class="fa-brands fa-google"></i> Google
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="youtube">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+            <a href="https://chat.openai.com" target="_blank" class="chatgpt">
+                <i class="fa-solid fa-robot"></i> ChatGPT
+            </a>
+            <a href="https://mail.google.com" target="_blank" class="gmail">
+                <i class="fa-solid fa-envelope"></i> Gmail
+            </a>
+            <a href="https://github.com" target="_blank" class="github">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
